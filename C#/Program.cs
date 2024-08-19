@@ -5,6 +5,11 @@ using System;
 using System.Diagnostics;
 using System.Security.Cryptography.X509Certificates;
 using Microsoft.VisualBasic;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Globalization;   // for different currency conversion
 
 //Hello World
 /*namespace MyApp
@@ -697,13 +702,54 @@ bool    1      True or False
 }*/
 
 //Numeric formatting
-namespace numericFormatting
+/*namespace numericFormatting
 {
     class Program
     {
         static void Main(string[] args)
         {
+            double value = 1000D / 12.34;  // if you put value 1000, it represent as int32, if you place D in value 1000D, it will represent as double
+            Console.WriteLine(value);
+
+            //Formatting method                                                                             
+            Console.WriteLine(string.Format("{0} {1}" , value , 1000));      //(string.Format({0} , {1} , value , 1000))
+                                                                             //                |     |
+                            // under format(), Inside the speach marks"", type patern {} {}, inside the patern give position number 0 ,1 then then assign numbers to the value respectively.
             
+            //look better formatting in decimal
+            Console.WriteLine(string.Format("{0:0}", value));   // {0:0.00} gives O/P -> 8.04
+            Console.WriteLine(string.Format("{0:0.0}", value));
+            Console.WriteLine(string.Format("{0:0.00}", value));
+
+            double money = 10D / 3D;  //3.33333
+
+            //when you get negative values
+            Console.WriteLine(money);
+            Console.WriteLine(string.Format("10 / 3 = {0:0.00}", money));  // 3.33
+            Console.WriteLine(money.ToString("C"));   // print the string format to display the best format
+            Console.WriteLine(money.ToString("C0"));
+            Console.WriteLine(money.ToString("C1"));
+            Console.WriteLine(money.ToString("C2"));
+
+            //curency symbol using the System.Globalization
+            Console.WriteLine(money.ToString("C", CultureInfo.CurrentCulture));
+            Console.WriteLine(money.ToString("C", CultureInfo.CreateSpecificCulture("en-IN")));
+            Console.WriteLine(money.ToString("C0", CultureInfo.CreateSpecificCulture("en-GB")));
+            Console.WriteLine(money.ToString("C1", CultureInfo.CreateSpecificCulture("en-US")));
+
+            Console.ReadLine();
+        }
+    }
+}*/
+
+// TryParse Function
+namespace tryParseFunction
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string value = "123.45";
         }
     }
 }
