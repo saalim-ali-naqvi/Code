@@ -708,11 +708,7 @@ bool    1      True or False
     {
         static void Main(string[] args)
         {
-            double value = 1000D / 12.34;  // if you put value 1000, it represent as int32, if you place D in value 1000D, it will represent as double
-            Console.WriteLine(value);
-
-            //Formatting method                                                                             
-            Console.WriteLine(string.Format("{0} {1}" , value , 1000));      //(string.Format({0} , {1} , value , 1000))
+                  //(string.Format({0} , {1} , value , 1000))
                                                                              //                |     |
                             // under format(), Inside the speach marks"", type patern {} {}, inside the patern give position number 0 ,1 then then assign numbers to the value respectively.
             
@@ -743,16 +739,54 @@ bool    1      True or False
 }*/
 
 // TryParse Function
-namespace tryParseFunction
+/*namespace tryParseFunction
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string value = "123.45";
+            bool success = true;
+
+            while(success)
+            {
+                Console.Write("Enter a number: ");
+                string numInput = Console.ReadLine();   //10h
+                //int num = Convert.ToInt32(numInput);
+                //int num = 0;
+
+                //bool success = int.TryParse(numInput, out num);//false  // this is use for if the user type 10p instaed of 10 then will will back "out num" will be executed, To print num value.
+
+                
+                if (int.TryParse(numInput, out int num))
+                {
+                    success = false;
+                    Console.WriteLine(num);
+                }
+                else
+                {
+                    Console.WriteLine("Failed to convert");
+                }
+            }
+        }
+    }
+}*/
+
+// EXERCISE: times table
+namespace excerciseTimeTable
+{
+    class Program
+    {
+        /*
+        1. Ask the user for a number for the table
+        2. Write a for loop to print X times table
+        */
+        static void Main(string[] agrs)
+        {
+
         }
     }
 }
+
 
 
 
