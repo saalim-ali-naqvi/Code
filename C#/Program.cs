@@ -922,6 +922,48 @@ else if (actualAnswer != answer)
     }
 }*/
 
+// String Concatenation (+)
+namespace stringConcatenation
+{
+    class Program
+    {
+        static void Main(string[] agrs)
+        {
+            string name = "ALI";
+            int age = 21;
+
+            //Normal String
+            Console.WriteLine("Your name is " + name + "Your age is " + age);
+            
+            // String formating {}
+            Console.WriteLine("Your name os {0} and your age is {1}", name, age);
+            
+            // Best method is Interpolation
+            // string interpolation $
+            Console.WriteLine($"Your name is {name} your age is {age}");
+            
+            //String Concatenation
+            string test = string.Concat("Your name is ", name, " and your age is ", age);
+            Console.WriteLine(test);
+
+            // concat with array
+            string[] names = new string[] {"Ali ", "Test ", "Test "};
+            Console.WriteLine(string.Concat(names));
+        }
+    }
+}
+
+// Empty String
+namespace emptyString
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string name = "ALI";
+        }
+    }
+}
 
 
 
