@@ -772,7 +772,7 @@ bool    1      True or False
 }*/
 
 // EXERCISE: times table
-namespace excerciseTimesTable
+/*namespace excerciseTimesTable
 {
     class Program
     {
@@ -780,7 +780,7 @@ namespace excerciseTimesTable
         1. Ask the user for a number for the table
         2. Write a for loop to print X times table
         */
-        static void Main(string[] agrs)
+        /*static void Main(string[] agrs)
         {
             Console.Write("Enter a number: ");
             int number = Convert.ToInt32(Console.ReadLine());
@@ -791,8 +791,54 @@ namespace excerciseTimesTable
             }
         }
     }
-}
+}*/
 
+/*namespace fizzBuzzGame
+{
+    class Program
+    {
+        /*
+        Create a for loop from 1 to X (15)
+        3 and 5 = FizzBuzz
+        3 = Fizz
+        5 = Buzz
+        else = number
+        */
+        
+        
+        /*static void Main(string[] args)
+        {
+            bool threeDivisible = false;
+            bool fiveDivisible = false;
+            
+            for (int i = 0; i <= 15; i++) //0-14  1-15
+            {
+                threeDivisible = i % 3 == 0;
+                fiveDivisible = i % 5 == 0;
+                
+                //10 % 2 = 0 (even)   11 % 2 = 1  (odd)
+                if (threeDivisible && fiveDivisible)
+                {
+                    Console.WriteLine("FizzBuzz");
+                }
+                else if (threeDivisible)
+                {
+                    Console.WriteLine("Fizz");
+                }
+                else if (fiveDivisible)
+                {
+                    Console.WriteLine("Buzz");
+                }
+                else
+                {
+                    Console.WriteLine(i);
+                }
+            }
+        }
+    }
+}*/
+
+// Verbatim String Literal (@)
 
 
 
