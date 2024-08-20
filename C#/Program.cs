@@ -9,8 +9,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Globalization;
-using System.Threading.Tasks.Dataflow;   // for different currency conversion
+using System.Globalization; // for different currency conversion
+using System.Threading.Tasks.Dataflow;
+using System.Linq.Expressions;
 
 //Hello World
 /*namespace MyApp
@@ -954,7 +955,7 @@ else if (actualAnswer != answer)
 }*/
 
 // Empty String
-namespace emptyString
+/*namespace emptyString
 {
     class Program
     {
@@ -970,6 +971,56 @@ namespace emptyString
             else
             {
                 Console.WriteLine("Name is empty");
+            }
+        }
+    }
+}*/
+
+// String Equals function
+namespace stringEquals
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string message = "Hello";
+            string compare = "HeLlo";
+
+            if (message.Equals(compare)) // (message == compare)
+            {
+                Console.WriteLine("Same");
+            }
+            else
+            {
+                Console.WriteLine("Different");
+            }
+
+            Console.WriteLine("Enter your name: ");
+            string name = Console.ReadLine();
+
+            //if (name != "")
+            if (!name.Equals(""))
+            {
+                Console.WriteLine("Your name is " + name);
+            }
+            else
+            {
+                Console.WriteLine("Invalid name input");
+            }
+
+            // array
+            char[] chars = new char[] {'H', 'e', 'l', 'l', 'o'};
+            object newCompare = new string(chars);
+
+            // == is comparing the values but also comparing the memory
+            // Equals is comparing the values only
+            if (message == newCompare)// Comparing memory and values both  //(message.Equals(newCompare)) only compare the values
+            {
+                Console.WriteLine("Same");
+            }
+            else
+            {
+                Console.WriteLine("Different");
             }
         }
     }
