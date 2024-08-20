@@ -923,7 +923,7 @@ else if (actualAnswer != answer)
 }*/
 
 // String Concatenation (+)
-namespace stringConcatenation
+/*namespace stringConcatenation
 {
     class Program
     {
@@ -951,7 +951,7 @@ namespace stringConcatenation
             Console.WriteLine(string.Concat(names));
         }
     }
-}
+}*/
 
 // Empty String
 namespace emptyString
@@ -960,7 +960,17 @@ namespace emptyString
     {
         static void Main(string[] args)
         {
-            string name = "ALI";
+            Console.Write("Emter your name: ");
+            string name = Console.ReadLine();
+
+            if (name != string.Empty) // (name != "") use string.Empty instead of "" quotation marks
+            {
+                Console.WriteLine($"Your name is {name}");
+            }
+            else
+            {
+                Console.WriteLine("Name is empty");
+            }
         }
     }
 }
