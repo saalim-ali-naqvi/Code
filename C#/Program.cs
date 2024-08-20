@@ -9,7 +9,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Globalization;   // for different currency conversion
+using System.Globalization;
+using System.Threading.Tasks.Dataflow;   // for different currency conversion
 
 //Hello World
 /*namespace MyApp
@@ -468,54 +469,54 @@ bool    1      True or False
                 Console.WriteLine("You are 18");
             }*/
 
-            /*if (age >= 18 && age <= 25)  // use and to give statement of between two statement
-            {
-                Console.WriteLine("You are Between 18 and 25");
-            }
-            else if (age >= 25)
-            {
-                Console.WriteLine("You are 25 or older");
-            }*/
+/*if (age >= 18 && age <= 25)  // use and to give statement of between two statement
+{
+    Console.WriteLine("You are Between 18 and 25");
+}
+else if (age >= 25)
+{
+    Console.WriteLine("You are 25 or older");
+}*/
 
-            /*if (age < 0 || age > 150)
-            {
-                Console.WriteLine("Invalid Age");
-            }
-            else
-            {
-                if (age >= 18 && age <= 25)
-                {
-                    Console.WriteLine("You are Between 18 and 25");
-                }
-                else if (age >= 26)
-                {
-                    Console.WriteLine("You are 26 or older");
-                }
-                Console.WriteLine("Valid Age");
-            }*/
-            /*Console.Write("Enter the first Number: ");
-            string numberInput = Console.ReadLine();
-            int numberA = Convert.ToInt32(numberInput);
-
-            Console.Write("Enter the secound Number: ");
-            int numberB = Convert.ToInt32(Console.ReadLine());
-
-            int answer = numberA * numberB;
-
-            Console.Write("Value of " + numberA + "X" + numberB + ": " );
-            string answerInput = Console.ReadLine();
-            int actualAnswer = Convert.ToInt32(answerInput);
-
-            if (actualAnswer == answer)
-            {
-                Console.WriteLine("Well done!");
-            }
-            else if (actualAnswer != answer)
-            {
-                Console.WriteLine("Close but it was a wrong answer");
-            }
-        }
+/*if (age < 0 || age > 150)
+{
+    Console.WriteLine("Invalid Age");
+}
+else
+{
+    if (age >= 18 && age <= 25)
+    {
+        Console.WriteLine("You are Between 18 and 25");
     }
+    else if (age >= 26)
+    {
+        Console.WriteLine("You are 26 or older");
+    }
+    Console.WriteLine("Valid Age");
+}*/
+/*Console.Write("Enter the first Number: ");
+string numberInput = Console.ReadLine();
+int numberA = Convert.ToInt32(numberInput);
+
+Console.Write("Enter the secound Number: ");
+int numberB = Convert.ToInt32(Console.ReadLine());
+
+int answer = numberA * numberB;
+
+Console.Write("Value of " + numberA + "X" + numberB + ": " );
+string answerInput = Console.ReadLine();
+int actualAnswer = Convert.ToInt32(answerInput);
+
+if (actualAnswer == answer)
+{
+    Console.WriteLine("Well done!");
+}
+else if (actualAnswer != answer)
+{
+    Console.WriteLine("Close but it was a wrong answer");
+}
+}
+}
 }*/
 
 // Switch Statement
@@ -780,17 +781,17 @@ bool    1      True or False
         1. Ask the user for a number for the table
         2. Write a for loop to print X times table
         */
-        /*static void Main(string[] agrs)
-        {
-            Console.Write("Enter a number: ");
-            int number = Convert.ToInt32(Console.ReadLine());
+/*static void Main(string[] agrs)
+{
+    Console.Write("Enter a number: ");
+    int number = Convert.ToInt32(Console.ReadLine());
 
-            for (int i = 0; i <= 10; i++)
-            {
-                Console.WriteLine("{0} x {1} = {2}", i, number, i * number);
-            }
-        }
+    for (int i = 0; i <= 10; i++)
+    {
+        Console.WriteLine("{0} x {1} = {2}", i, number, i * number);
     }
+}
+}
 }*/
 
 /*namespace fizzBuzzGame
@@ -804,42 +805,42 @@ bool    1      True or False
         5 = Buzz
         else = number
         */
-        
-        
-        /*static void Main(string[] args)
+
+
+/*static void Main(string[] args)
+{
+    bool threeDivisible = false;
+    bool fiveDivisible = false;
+
+    for (int i = 0; i <= 15; i++) //0-14  1-15
+    {
+        threeDivisible = i % 3 == 0;
+        fiveDivisible = i % 5 == 0;
+
+        //10 % 2 = 0 (even)   11 % 2 = 1  (odd)
+        if (threeDivisible && fiveDivisible)
         {
-            bool threeDivisible = false;
-            bool fiveDivisible = false;
-            
-            for (int i = 0; i <= 15; i++) //0-14  1-15
-            {
-                threeDivisible = i % 3 == 0;
-                fiveDivisible = i % 5 == 0;
-                
-                //10 % 2 = 0 (even)   11 % 2 = 1  (odd)
-                if (threeDivisible && fiveDivisible)
-                {
-                    Console.WriteLine("FizzBuzz");
-                }
-                else if (threeDivisible)
-                {
-                    Console.WriteLine("Fizz");
-                }
-                else if (fiveDivisible)
-                {
-                    Console.WriteLine("Buzz");
-                }
-                else
-                {
-                    Console.WriteLine(i);
-                }
-            }
+            Console.WriteLine("FizzBuzz");
+        }
+        else if (threeDivisible)
+        {
+            Console.WriteLine("Fizz");
+        }
+        else if (fiveDivisible)
+        {
+            Console.WriteLine("Buzz");
+        }
+        else
+        {
+            Console.WriteLine(i);
         }
     }
+}
+}
 }*/
 
 // Verbatim String Literal (@)
-namespace verbatimStringLiteral
+/*namespace verbatimStringLiteral
 {
     class Program
     {
@@ -870,19 +871,39 @@ namespace verbatimStringLiteral
 
         }
     }
-}
+}*/
 
-//
-namespace stringFormatting
+// String Formatting ({0})
+// if you put long sentences in the strings
+/*namespace stringFormatting
 {
     class Program
     {
         static void Main(string[] args)
         {
-            
+            string name = "ALI";
+            int age = 21;
+            string gender = "Male";
+
+            Console.WriteLine("Name: " + name);
+            Console.WriteLine("Age: " + age);
+
+            Console.WriteLine();
+
+            // another way of writing this
+            Console.WriteLine("Name: " + name + "\nAge" + age);
+
+            // another way of writting this
+            Console.WriteLine("Your name is " + name + ", and your age is " + age);
+            // String formating use {0} {1} for name, age repectively
+            Console.WriteLine("Your name is {0}, and your age is {1}, gender is {2}", name, age, gender);
+            Console.WriteLine("Name: {0} \nAge: {1} \nGender: {2}", name, age, gender);
+
         }
     }
-}
+}*/
+
+
 
 
 
