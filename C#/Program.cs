@@ -839,6 +839,50 @@ bool    1      True or False
 }*/
 
 // Verbatim String Literal (@)
+namespace verbatimStringLiteral
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // single backslash (\) represent the reference
+            // bouble backslash (\\) represent path
+            // for the path have single backslash but the code compiler know the reference like \n or \t     >"C:\\Users\\user\\Documents\\file.txt";
+            // to solve this we use @"";     // @"C:\Users\user\Documents\file.txt";
+            
+            string speech = "He said \"something\"";
+            string path = "C:\\Users\\user\\Documents\\file.txt\n new line test";
+            Console.WriteLine(path);
+            Console.WriteLine(speech);
+            //$ +
+            //$"Your name is (name)"
+            //"Your name is" + name
+
+            // path = @""; 
+            path = @"C:\Users\user\Documents\file.txt" + "\n new line test";
+            Console.WriteLine(path);
+
+            string name = @"hello""somone""";
+            Console.WriteLine(name);
+
+            name = @"hello 'someone'";
+            Console.WriteLine(name);
+
+        }
+    }
+}
+
+//
+namespace stringFormatting
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+        }
+    }
+}
 
 
 
