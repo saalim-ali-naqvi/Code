@@ -772,7 +772,7 @@ bool    1      True or False
 }*/
 
 // EXERCISE: times table
-namespace excerciseTimeTable
+namespace excerciseTimesTable
 {
     class Program
     {
