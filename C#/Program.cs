@@ -903,6 +903,24 @@ else if (actualAnswer != answer)
     }
 }*/
 
+// String interpolation ($)
+/*namespace stringInterpolation
+{
+    class Program
+    {
+        static void Main(string[] agrs)
+        {
+            string name = "ALI";
+            int age = 21;
+            string gender = "Male";
+
+            Console.WriteLine("Your name is " + name + "Your age is " + age);
+            // string interpolation
+            // use $ doller sign before, use {} to assign the variable like $_____ {name} _____ {age}
+            Console.WriteLine($"Your name is {name} your age is {age}");
+        }
+    }
+}*/
 
 
 
