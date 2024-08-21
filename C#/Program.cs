@@ -977,7 +977,7 @@ else if (actualAnswer != answer)
 }*/
 
 // String Equals function
-namespace stringEquals
+/*namespace stringEquals
 {
     class Program
     {
@@ -1022,6 +1022,46 @@ namespace stringEquals
             {
                 Console.WriteLine("Different");
             }
+        }
+    }
+}*/
+
+// String iteration (looping)
+namespace stringIteration
+{
+    class Program
+    {
+        static void Main(string[] agrs)
+        {
+            string message = "C# is awesome";
+            //char[]
+            Console.WriteLine(message[0]); // C
+            Console.WriteLine(message[1]); // C#
+            Console.WriteLine(message[2]); // 
+            Console.WriteLine(message[3]); // i
+
+            for (int i = 0; i < message.Length; i++)
+            {
+                //printing array of Index
+                Console.Write(message[i]);
+                // Printing like a Hover effect of the output
+                // 10 to 1000 to and so on fast to slow move the output
+                Thread.Sleep(100); //1000ms = 1sec
+            }
+            Console.ReadLine();
+            Console.WriteLine(message.Contains("C"));
+
+            bool Contains = false;
+            
+            for (int i = 0; i < message.Length; i++)
+            {
+                if (message[i].Equals('C'))
+                {
+                    Contains = true;
+                }
+            }
+
+            Console.WriteLine(Contains);
         }
     }
 }
