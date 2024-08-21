@@ -1027,7 +1027,7 @@ else if (actualAnswer != answer)
 }*/
 
 // String iteration (looping)
-namespace stringIteration
+/*namespace stringIteration
 {
     class Program
     {
@@ -1064,8 +1064,51 @@ namespace stringIteration
             Console.WriteLine(Contains);
         }
     }
-}
+}*/
 
+// String IsNullOrEmpty function
+/*namespace StringIsNullOrEmpty
+{
+    class Program
+    {
+        static void Main(string[] agrs)
+        {
+            Console.Write("Enter your name: ");
+            string name = Console.ReadLine();
+
+            Console.WriteLine($"Your name is {name}");
+
+            //if (name != "")
+            //    Console.WriteLine("0");
+
+            //if (!name.Equals(""))
+            //    Console.WriteLine("1");
+
+            // IsNullOrEmpty
+            // When the String name is executed if the Null Or Empty Chatacter found.
+            if (!string.IsNullOrEmpty(name))  // Null or "" Empty
+            {
+                if (name.Equals("Ali"))
+                {
+                    Console.WriteLine("Correct");
+                }
+            }
+
+        }
+    }
+}*/
+
+// EXERCISE: Print String in Reverse
+namespace printStringInReverse
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter your name: ");
+        }
+    }
+}
 
 
 
