@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Globalization; // for different currency conversion
 using System.Threading.Tasks.Dataflow;
 using System.Linq.Expressions;
+using System.ComponentModel.DataAnnotations;
 
 //Hello World
 /*namespace MyApp
@@ -1103,9 +1104,33 @@ namespace printStringInReverse
 {
     class Program
     {
+        /*
+        Ask user to input message
+        Print in order
+        print in reverse
+        */
+        
         static void Main(string[] args)
         {
-            Console.Write("Enter your name: ");
+            Console.Write("Enter your message: ");
+            string message = Console.ReadLine();
+
+            //Console.WriteLine(message[0]);
+            //Console.WriteLine(message.Length);  //14
+
+            // without reverse
+            for (int i =0; i < message.Length; i++) // 0-13
+            {
+                Console.Write(message[i]);
+            }
+
+            Console.Write("-");
+
+            // reverse
+            for (int i = message.Length - 1; i >= 0; i--) //13-0
+            {
+                Console.Write(message[i]);
+            }
         }
     }
 }
