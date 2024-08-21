@@ -13,6 +13,7 @@ using System.Globalization; // for different currency conversion
 using System.Threading.Tasks.Dataflow;
 using System.Linq.Expressions;
 using System.ComponentModel.DataAnnotations;
+using System.Data;
 
 //Hello World
 /*namespace MyApp
@@ -1109,34 +1110,34 @@ else if (actualAnswer != answer)
         Print in order
         print in reverse
         */
-        
-        /*static void Main(string[] args)
-        {
-            Console.Write("Enter your message: ");
-            string message = Console.ReadLine();
 
-            //Console.WriteLine(message[0]);
-            //Console.WriteLine(message.Length);  //14
+/*static void Main(string[] args)
+{
+    Console.Write("Enter your message: ");
+    string message = Console.ReadLine();
 
-            // without reverse
-            for (int i =0; i < message.Length; i++) // 0-13
-            {
-                Console.Write(message[i]);
-            }
+    //Console.WriteLine(message[0]);
+    //Console.WriteLine(message.Length);  //14
 
-            Console.Write("-");
-
-            // reverse
-            for (int i = message.Length - 1; i >= 0; i--) //13-0
-            {
-                Console.Write(message[i]);
-            }
-        }
+    // without reverse
+    for (int i =0; i < message.Length; i++) // 0-13
+    {
+        Console.Write(message[i]);
     }
+
+    Console.Write("-");
+
+    // reverse
+    for (int i = message.Length - 1; i >= 0; i--) //13-0
+    {
+        Console.Write(message[i]);
+    }
+}
+}
 }*/
 
 // EXERCISE: Password checker
-namespace passwordChecker
+/*namespace passwordChecker
 {
     class Program
     {
@@ -1149,46 +1150,162 @@ namespace passwordChecker
                 > If they are not, print "Passwords do not match"
             > If they are empty, print "Please enter the password"
         */
-        static void Main(string[] args)
+/*static void Main(string[] args)
+{
+    Console.Write("Enter password: ");
+    string password = Console.ReadLine();
+
+    Console.Write("Confirm password: ");
+    string passwordConfirm = Console.ReadLine();
+
+    if (!password.Equals(string.Empty))
+    {
+        if (!passwordConfirm.Equals(string.Empty))
         {
-            Console.Write("Enter password: ");
-            string password = Console.ReadLine();
-
-            Console.Write("Confirm password: ");
-            string passwordConfirm = Console.ReadLine();
-
-            if (!password.Equals(string.Empty))
+            if (password.Length >= 6 && passwordConfirm.Length >= 6) // Check password Length
             {
-                if (!passwordConfirm.Equals(string.Empty))
+                if (password.Equals(passwordConfirm)) // check password confirmation
                 {
-                    if (password.Length >= 6 && passwordConfirm.Length >= 6) // Check password Length
-                    {
-                        if (password.Equals(passwordConfirm)) // check password confirmation
-                        {
-                            Console.WriteLine("Passwords match");
-                        }
-                        else
-                        {
-                            Console.WriteLine("Password do not match");
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine("Please enter 6 or more character");
-                    }
+                    Console.WriteLine("Passwords match");
                 }
                 else
                 {
-                    Console.WriteLine("Please enter a password confirmation");
+                    Console.WriteLine("Password do not match");
                 }
             }
             else
             {
-                Console.WriteLine("Please Enter a password: ");
+                Console.WriteLine("Please enter 6 or more character");
             }
+        }
+        else
+        {
+            Console.WriteLine("Please enter a password confirmation");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Please Enter a password: ");
+    }
+}
+}
+}*/
+
+// Arrays []
+/*namespace Arrays
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ArraysOfMethod(); // call new method to main method
+
+            triangleArray myObj = new triangleArray(); // call new class to main method
+            myObj.anglesOfArrays();                    // call new class method to main method
+            
+            // Declare an array of integers
+            /*int num1 = 5;
+            int num2 = 10;
+            int num3 = 15;
+            int num4 = 20;
+
+            Console.Write("Enter a number: ");
+            numbers[0] = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter a number: ");
+            numbers[1] = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter a number: ");
+            numbers[2] = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter a number: ");
+            numbers[3] = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter a number: ");
+            numbers[4] = Convert.ToInt32(Console.ReadLine());
+
+            //Console.WriteLine($"{num1} {num2} {num3} {num3}");
+            //Console.WriteLine($"{numbers[0]} {numbers[1]} {numbers[2]} {numbers[3]}");
+
+            for ( int i = 0; i< numbers.Length; i++)
+            {
+                Console.Write($"{numbers[i]} ");
+            }
+
+            // declare integer Arrays
+            int[] numbers = new int[2];
+            
+            for ( int i = 0; i< numbers.Length; i++)
+            {
+                Console.Write("Enter a number: ");
+                numbers[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            for ( int i = 0; i< numbers.Length; i++)
+            {
+                Console.Write($"{numbers[i]} ");
+            }
+
+            Console.WriteLine();
+
+            // output will be same as for and foreach as as for
+            foreach (int num in numbers)
+            {
+                Console.Write($"{num}");
+            }
+
+            //Console.WriteLine();
+        }
+
+        // create new method
+        static void ArraysOfMethod()
+        {
+          Console.WriteLine("New method created");
+        }
+    }
+
+    // create a new class
+    class triangleArray
+    {
+        public void anglesOfArrays()
+        {
+          // without store values
+          const int angleCount = 3;
+          int angleSum = 0;
+
+          for (int i = 0; i < angleCount; i++)
+          {
+            //Console.Write("Enter angle 1: "); // Problem with this is you cannot print as sequence
+            Console.Write($"Enter angle {i + 1}: "); // use interpolaton
+            angleSum += Convert.ToInt32(Console.ReadLine());
+          }
+
+          Console.WriteLine(angleSum);
+
+          Console.WriteLine(angleSum == 180 ? "Valid" : "Invalid"); // Conditional Operator
+
+          // with store values
+          
+          const int angleCount = 3;
+          int[] angles = new int[angleCount];
+          for (int i = 0; i < angleCount; i++)
+          {
+            Console.Write($"Enter angle {i + 1}: ");
+            angles[i] = Convert.ToInt32(Console.ReadLine());
+          }
+
+          int angleSum = 0;
+          foreach (int angle in angles)
+          {
+            angleSum += angle;
+          }
+          Console.WriteLine(angleSum);
+          Console.WriteLine(angleSum == 180 ? "Valid" : "Invalid");
+          
         }
     }
 }
+*/
 
 
 
