@@ -1332,7 +1332,50 @@ else if (actualAnswer != answer)
     }
 }*/
 
+// Array reversal
+/*namespace arrayReversal
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*int[] numbers = new int[]
+            {
+                9, 3, 5, 4, 2, 7
+            };
 
+            Array.Sort(numbers); // First sort
+            Array.Reverse(numbers); // Then reverse
+
+            foreach (var item in numbers)
+            {
+                Console.Write($"{item} ");
+            }*/
+
+            /*int[] numbers = new int[]
+            {
+                9, 3, 5, 4, 2, 7
+            };
+
+            int[] sortedNumbers = new int[numbers.Length];
+
+            int x = 0;
+
+            for (int i = numbers.Length - 1; i >= 0 ; i--)
+            {
+                sortedNumbers[x] = numbers[i];
+                x++;
+            }
+
+            // print output
+            foreach (var num in sortedNumbers)
+            {
+                Console.Write($"{num} ");
+            }
+
+        }
+    }
+}*/
 
 
 
