@@ -1100,7 +1100,7 @@ else if (actualAnswer != answer)
 }*/
 
 // EXERCISE: Print String in Reverse
-namespace printStringInReverse
+/*namespace printStringInReverse
 {
     class Program
     {
@@ -1110,7 +1110,7 @@ namespace printStringInReverse
         print in reverse
         */
         
-        static void Main(string[] args)
+        /*static void Main(string[] args)
         {
             Console.Write("Enter your message: ");
             string message = Console.ReadLine();
@@ -1130,6 +1130,61 @@ namespace printStringInReverse
             for (int i = message.Length - 1; i >= 0; i--) //13-0
             {
                 Console.Write(message[i]);
+            }
+        }
+    }
+}*/
+
+// EXERCISE: Password checker
+namespace passwordChecker
+{
+    class Program
+    {
+        /*
+            Ask user to input password, and store
+            Ask user to enter password again, and store
+            Check if if they are both contain something
+            > if so check if they are the same
+                > If they are, print "Passwords match"
+                > If they are not, print "Passwords do not match"
+            > If they are empty, print "Please enter the password"
+        */
+        static void Main(string[] args)
+        {
+            Console.Write("Enter password: ");
+            string password = Console.ReadLine();
+
+            Console.Write("Confirm password: ");
+            string passwordConfirm = Console.ReadLine();
+
+            if (!password.Equals(string.Empty))
+            {
+                if (!passwordConfirm.Equals(string.Empty))
+                {
+                    if (password.Length >= 6 && passwordConfirm.Length >= 6) // Check password Length
+                    {
+                        if (password.Equals(passwordConfirm)) // check password confirmation
+                        {
+                            Console.WriteLine("Passwords match");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Password do not match");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Please enter 6 or more character");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Please enter a password confirmation");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Please Enter a password: ");
             }
         }
     }
