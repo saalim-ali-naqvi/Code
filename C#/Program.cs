@@ -1693,7 +1693,101 @@ else if (actualAnswer != answer)
     }
 }*/
 
+// Return type functions
+/*namespace returnTypeFunctions
+{
+    class Program
+    {
+        //static string name = "ALI";
+        static void Main(string[] args)
+        {
+            Console.Title = ReturnAgePair();
+            PrintIntroduction();
 
+            int[] numbers = new int[3];
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                //convert to int32
+                numbers[i] = ReadNumberFromConsole();
+            }
+
+            foreach (var item in numbers)
+            {
+                Console.Write($"{item} ");
+            }
+
+            int[] newNumbers = CreateRandomArray();
+            foreach (var item in newNumbers)
+            {
+                Console.Write($"{item} ");
+            }
+
+            Console.WriteLine(Add());
+        }
+
+        static void Test()
+        {
+            //conversion
+            //Calculation
+        }
+        static void conversion()
+        {
+
+        }
+        static void Calculation()
+        {
+
+        }
+        static int Add()
+        {
+            int.TryParse("", out int x);
+            return 5 + 5;
+        }
+        static bool TryParse(string s, int result)
+        {
+            result = 0;
+            return true;
+        }
+        
+        static int[] CreateRandomArray()
+        {
+            return new int[3] { 0, 1, 2};
+        }
+
+        static int ReadNumberFromConsole()
+        {
+            Console.Write("Enter a number: ");
+            return Convert.ToInt32(Console.ReadLine());
+        }
+        
+        static string ReturnName()
+        {
+            return "ALI";
+        }
+
+        static int ReturnAge()
+        {
+            return 21;
+        }
+        static string ReturnAgePair()
+        {
+            return $"{ReturnName()} - {ReturnAge()}";
+        }
+
+        static void PrintIntroduction()
+        {
+            /*string name = ReturnName();
+            int age = ReturnAge();
+            string output = $"Hello my name is {name} and my age is {age}";
+            Console.WriteLine(output);*/
+
+            /*Console.WriteLine($"Hello my name is {ReturnName()} and my age is {ReturnAge()}");
+        }
+    }
+}*/
+
+//
 
 
 
