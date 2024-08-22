@@ -1455,6 +1455,45 @@ else if (actualAnswer != answer)
     }
 }*/
 
+// List<>
+/*namespace Lists
+{
+    class Program
+    {
+        static void Main(string[] agrs)
+        {
+            // arrays but a static and it has limit of the given limit or value like 3
+            /*int[] numbers = new int[3]
+            {
+                1, 2, 3
+            };*/
+
+            // list is dynamic there is no limit, you can add values as you can
+            /*List<int> listNumbers = new List<int>()
+            {
+                1,2,3,4,5
+            };
+
+            //listNumbers.Add(1);
+            //listNumbers.Add(2);
+            //listNumbers.Add(3);
+
+            for (int i =0; i < 3; i++)
+            {
+                Console.Write("Enter a number: ");
+                listNumbers.Add( Convert.ToInt32(Console.ReadLine()));
+            }
+
+            for (int i = 0; i < listNumbers.Count; i++) // Array have fixed Length thats why use listNumber.Length 
+            {                                           // and List is dynamic we use listsNumber.Count
+                Console.WriteLine(listNumbers[i]);
+            }
+
+            listNumbers.RemoveAt(0);
+
+            foreach (var item in listNumbers)
+            {
+                Console.WriteLine(item);
             }            
         }
     }
