@@ -1499,6 +1499,68 @@ else if (actualAnswer != answer)
     }
 }*/
 
+// Dictionary
+namespace Dictionary
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Dictionary is a collection of key value pairs
+            /*Dictionary<int, string> names = new Dictionary<int, string>
+            {
+                // keyValuePair
+                {1, "Ali"},
+                {2, "Naqvi"},
+                {3, "Saalim"}
+            };
+
+            for (int i = 0; i < names.Count; i++) // Dictionary is also names.Count 
+            {
+                KeyValuePair<int, string> pair = names.ElementAt(i);
+                Console.WriteLine($"{pair.Key} - {pair.Value}");
+            }
+
+            foreach (KeyValuePair<int, string> item in names)
+            {
+                Console.WriteLine($"{item.Key} - {item.Value}");
+            }*/
+
+            Dictionary<string, string> teachers = new Dictionary<string, string>
+            {
+                {"Game programmer", "Vikas Bhai"},
+                {"3D Modelling", "Monis Bhai"}
+            };
+
+            Console.WriteLine(teachers["Game programmer"]); // similar to int.TryParse Convert
+
+            if (teachers.TryGetValue("Game programmer", out string yoyoteacher))
+            {
+                Console.WriteLine(teachers);
+
+                teachers["Game programmer"] = "Saalim";
+            }
+            else
+            {
+                Console.WriteLine("Game programmer not found");
+            }
+
+            if (teachers.ContainsKey("Game programmer"))
+            {
+                Console.WriteLine("Game programmer");
+            }
+            else
+            {
+                Console.WriteLine("Game programmer not found");
+            }
+
+            foreach (var item in teachers)
+            {
+                Console.WriteLine($"{item.Key} - {item.Value}");
+            }
+        }
+    }
+}
 
 
 
