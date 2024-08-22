@@ -1377,6 +1377,46 @@ else if (actualAnswer != answer)
     }
 }*/
 
+// Array Clearing
+/*namespace arrayClearing
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] numbers = new int[]
+            {
+                9, 3, 5, 4, 2, 7, 8, 0, 1
+            };
+
+            //Array.Clear(numbers, 0, numbers.Length);
+            Array.Clear(numbers, 5, 5); // for go 5 index value and 5 null value
+
+            for (int i = 5; i < 10; i++)
+            {
+                numbers [i] = default;
+            }
+
+            foreach (var item in numbers)
+            {
+                Console.Write($"{item} ");
+            }
+        }
+    }
+}*/
+
+// Array IndexOf
+namespace arrayIndexOf
+{
+    class Program
+    {
+        static void Main(string[] agrs)
+        {
+            
+        }
+    }
+}
+
 
 
 
