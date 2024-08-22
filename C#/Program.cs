@@ -1646,7 +1646,24 @@ else if (actualAnswer != answer)
     }
 }*/
 
-//
+// Functions
+/*namespace functions
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            WelcomeMessage();
+        }
+
+        static void WelcomeMessage()
+        {
+            Console.WriteLine("Assalam Alaikum, Welcome Saalim");
+        }
+    }
+}*/
+
+// 
 
 
 
