@@ -1406,16 +1406,54 @@ else if (actualAnswer != answer)
 }*/
 
 // Array IndexOf
-namespace arrayIndexOf
+/*namespace arrayIndexOf
 {
     class Program
     {
         static void Main(string[] agrs)
         {
-            
+            int[] numbers = new int[]
+            {
+                90, 199, 22, 50, 30
+            };
+
+            Console.Write("Enter the number to serach: ");
+            int search = Convert.ToInt32(Console.ReadLine());
+
+            //IndexOf - searching numbers or value in a index of array
+            //int position = Array.IndexOf(numbers, search); // this will go to everything
+            //int position = Array.IndexOf(numbers, search, 2); // this will go at the end
+            int position = Array.IndexOf(numbers, search, 1, 2); // this will go to the spesofic range
+
+            if (position > -1) //0 ->
+            {
+                Console.WriteLine($"Number {search} has been found at position {position +1}");
+            }
+            else
+            {
+                Console.WriteLine($"Number {search} has not been found");
+            }
+
+            /*int position = -1;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] == search)
+                {
+                    position = i;
+                }
+            }
+
+            if (position > -1) //0 ->
+            {
+                Console.WriteLine($"Number {search} has been found at position {position +1}");
+            }
+            else
+            {
+                Console.WriteLine($"Number {search} has not been found");
+            }
         }
     }
-}
+}*/
 
 
 
