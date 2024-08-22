@@ -1563,7 +1563,7 @@ else if (actualAnswer != answer)
 }*/
 
 // EXERCISE: Odd/Even number split
-namespace oddEvenNumverSplit
+/*namespace oddEvenNumverSplit
 {
     class Program
     {
@@ -1576,7 +1576,7 @@ namespace oddEvenNumverSplit
         Print odd list
         */
         
-        static void Main(string[] args)
+        /*static void Main(string[] args)
         {
             List<int> odd = new List<int>();
             List<int> even = new List<int>();
@@ -1610,7 +1610,44 @@ namespace oddEvenNumverSplit
         }
 
     }
-}
+}*/
+
+// EXERCISE: Array of multiples
+/*namespace arrayOfMultiples
+{
+    class Program
+    {
+        /*
+        Define and initialise two integers (num, length)
+        (7, 5) -> [7, 14, 21, 28, 35]
+        Create int array with size length
+        loop through and insert the (loop counter x num) into the array
+        print the final array
+        */
+
+        /*static void Main(string[] args)
+        {
+            int num = 10;
+            int length = 10;
+            int[] multiples = new int[length];
+            int counter = 0;
+
+            for (int i = 1; i <= multiples.Length; i++, counter++)
+            {
+                multiples[counter] = num * i;
+            }
+
+            foreach (var item in multiples)
+            {
+                Console.Write($"{item} ");
+            }
+        }
+
+    }
+}*/
+
+//
+
 
 
 
