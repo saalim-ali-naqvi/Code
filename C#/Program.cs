@@ -1663,7 +1663,37 @@ else if (actualAnswer != answer)
     }
 }*/
 
-// 
+// Void functions
+/*namespace voidFunctions
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            CreateAndPrintArray();
+            WelcomeMessage();
+
+            Console.ReadLine();
+        }
+
+        static void CreateAndPrintArray()
+        {
+            int[] numbers = new int[3] { 0, 2, 3 };
+
+            foreach (var item in numbers)
+            {
+                Console.WriteLine($"{item} ");
+            }
+        }
+
+        static void WelcomeMessage()
+        {
+            Console.WriteLine("Welcome");
+        }
+    }
+}*/
+
+
 
 
 
