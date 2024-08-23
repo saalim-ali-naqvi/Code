@@ -14,6 +14,7 @@ using System.Threading.Tasks.Dataflow;
 using System.Linq.Expressions;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
+using System.Xml.XPath;
 
 //Hello World
 /*namespace MyApp
@@ -1352,29 +1353,29 @@ else if (actualAnswer != answer)
                 Console.Write($"{item} ");
             }*/
 
-            /*int[] numbers = new int[]
-            {
-                9, 3, 5, 4, 2, 7
-            };
+/*int[] numbers = new int[]
+{
+    9, 3, 5, 4, 2, 7
+};
 
-            int[] sortedNumbers = new int[numbers.Length];
+int[] sortedNumbers = new int[numbers.Length];
 
-            int x = 0;
+int x = 0;
 
-            for (int i = numbers.Length - 1; i >= 0 ; i--)
-            {
-                sortedNumbers[x] = numbers[i];
-                x++;
-            }
+for (int i = numbers.Length - 1; i >= 0 ; i--)
+{
+    sortedNumbers[x] = numbers[i];
+    x++;
+}
 
-            // print output
-            foreach (var num in sortedNumbers)
-            {
-                Console.Write($"{num} ");
-            }
+// print output
+foreach (var num in sortedNumbers)
+{
+    Console.Write($"{num} ");
+}
 
-        }
-    }
+}
+}
 }*/
 
 // Array Clearing
@@ -1468,35 +1469,35 @@ else if (actualAnswer != answer)
                 1, 2, 3
             };*/
 
-            // list is dynamic there is no limit, you can add values as you can
-            /*List<int> listNumbers = new List<int>()
-            {
-                1,2,3,4,5
-            };
+// list is dynamic there is no limit, you can add values as you can
+/*List<int> listNumbers = new List<int>()
+{
+    1,2,3,4,5
+};
 
-            //listNumbers.Add(1);
-            //listNumbers.Add(2);
-            //listNumbers.Add(3);
+//listNumbers.Add(1);
+//listNumbers.Add(2);
+//listNumbers.Add(3);
 
-            for (int i =0; i < 3; i++)
-            {
-                Console.Write("Enter a number: ");
-                listNumbers.Add( Convert.ToInt32(Console.ReadLine()));
-            }
+for (int i =0; i < 3; i++)
+{
+    Console.Write("Enter a number: ");
+    listNumbers.Add( Convert.ToInt32(Console.ReadLine()));
+}
 
-            for (int i = 0; i < listNumbers.Count; i++) // Array have fixed Length thats why use listNumber.Length 
-            {                                           // and List is dynamic we use listsNumber.Count
-                Console.WriteLine(listNumbers[i]);
-            }
+for (int i = 0; i < listNumbers.Count; i++) // Array have fixed Length thats why use listNumber.Length 
+{                                           // and List is dynamic we use listsNumber.Count
+    Console.WriteLine(listNumbers[i]);
+}
 
-            listNumbers.RemoveAt(0);
+listNumbers.RemoveAt(0);
 
-            foreach (var item in listNumbers)
-            {
-                Console.WriteLine(item);
-            }            
-        }
-    }
+foreach (var item in listNumbers)
+{
+    Console.WriteLine(item);
+}            
+}
+}
 }*/
 
 // Dictionary
@@ -1526,40 +1527,40 @@ else if (actualAnswer != answer)
                 Console.WriteLine($"{item.Key} - {item.Value}");
             }*/
 
-            /*Dictionary<string, string> teachers = new Dictionary<string, string>
-            {
-                {"Game programmer", "Vikas Bhai"},
-                {"3D Modelling", "Monis Bhai"}
-            };
+/*Dictionary<string, string> teachers = new Dictionary<string, string>
+{
+    {"Game programmer", "Vikas Bhai"},
+    {"3D Modelling", "Monis Bhai"}
+};
 
-            Console.WriteLine(teachers["Game programmer"]); // similar to int.TryParse Convert
+Console.WriteLine(teachers["Game programmer"]); // similar to int.TryParse Convert
 
-            if (teachers.TryGetValue("Game programmer", out string yoyoteacher))
-            {
-                Console.WriteLine(teachers);
+if (teachers.TryGetValue("Game programmer", out string yoyoteacher))
+{
+    Console.WriteLine(teachers);
 
-                teachers["Game programmer"] = "Saalim";
-            }
-            else
-            {
-                Console.WriteLine("Game programmer not found");
-            }
+    teachers["Game programmer"] = "Saalim";
+}
+else
+{
+    Console.WriteLine("Game programmer not found");
+}
 
-            if (teachers.ContainsKey("Game programmer"))
-            {
-                Console.WriteLine("Game programmer");
-            }
-            else
-            {
-                Console.WriteLine("Game programmer not found");
-            }
+if (teachers.ContainsKey("Game programmer"))
+{
+    Console.WriteLine("Game programmer");
+}
+else
+{
+    Console.WriteLine("Game programmer not found");
+}
 
-            foreach (var item in teachers)
-            {
-                Console.WriteLine($"{item.Key} - {item.Value}");
-            }
-        }
-    }
+foreach (var item in teachers)
+{
+    Console.WriteLine($"{item.Key} - {item.Value}");
+}
+}
+}
 }*/
 
 // EXERCISE: Odd/Even number split
@@ -1575,41 +1576,41 @@ else if (actualAnswer != answer)
         Print even list
         Print odd list
         */
-        
-        /*static void Main(string[] args)
+
+/*static void Main(string[] args)
+{
+    List<int> odd = new List<int>();
+    List<int> even = new List<int>();
+
+    for (int i = 0; i <= 20; i++)
+    {
+        if (i % 2 == 0)
         {
-            List<int> odd = new List<int>();
-            List<int> even = new List<int>();
-
-            for (int i = 0; i <= 20; i++)
-            {
-                if (i % 2 == 0)
-                {
-                    even.Add(i);
-                }
-                else
-                {
-                    odd.Add(i);
-                }
-            }
-
-            Console.WriteLine("Printing the even numbers: ");
-
-            foreach (var item in even)
-            {
-                Console.Write($"{item} ");
-            }
-
-            Console.WriteLine(Environment.NewLine + "Printing odd numbers: ");
-
-            foreach (var item in odd)
-            {
-                Console.Write($"{item} ");
-            }
-
+            even.Add(i);
         }
-
+        else
+        {
+            odd.Add(i);
+        }
     }
+
+    Console.WriteLine("Printing the even numbers: ");
+
+    foreach (var item in even)
+    {
+        Console.Write($"{item} ");
+    }
+
+    Console.WriteLine(Environment.NewLine + "Printing odd numbers: ");
+
+    foreach (var item in odd)
+    {
+        Console.Write($"{item} ");
+    }
+
+}
+
+}
 }*/
 
 // EXERCISE: Array of multiples
@@ -1625,25 +1626,25 @@ else if (actualAnswer != answer)
         print the final array
         */
 
-        /*static void Main(string[] args)
-        {
-            int num = 10;
-            int length = 10;
-            int[] multiples = new int[length];
-            int counter = 0;
+/*static void Main(string[] args)
+{
+    int num = 10;
+    int length = 10;
+    int[] multiples = new int[length];
+    int counter = 0;
 
-            for (int i = 1; i <= multiples.Length; i++, counter++)
-            {
-                multiples[counter] = num * i;
-            }
-
-            foreach (var item in multiples)
-            {
-                Console.Write($"{item} ");
-            }
-        }
-
+    for (int i = 1; i <= multiples.Length; i++, counter++)
+    {
+        multiples[counter] = num * i;
     }
+
+    foreach (var item in multiples)
+    {
+        Console.Write($"{item} ");
+    }
+}
+
+}
 }*/
 
 // Functions
@@ -1782,12 +1783,60 @@ else if (actualAnswer != answer)
             string output = $"Hello my name is {name} and my age is {age}";
             Console.WriteLine(output);*/
 
-            /*Console.WriteLine($"Hello my name is {ReturnName()} and my age is {ReturnAge()}");
-        }
-    }
+/*Console.WriteLine($"Hello my name is {ReturnName()} and my age is {ReturnAge()}");
+}
+}
 }*/
 
-//
+// Function parameters
+namespace functionParameters
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int Calculation = Add(50, 50);
+            Console.WriteLine(Calculation);
+
+            int num = ReadInt("number");
+            Console.WriteLine(num);
+
+            int angle = ReadInt("Angle");
+            Console.WriteLine(angle);
+
+            int firstNumber = ReadInt("Enter the first number: ");
+            int secondNumber = ReadInt("Enter the second number: ");
+            int result = Add(firstNumber, secondNumber);
+            Console.WriteLine(result);
+
+            Console.Write("Enter your name: ");
+            string name = Console.ReadLine();
+
+            Console.Write("Enter your age: ");
+            int age = ReadInt("Enter your age");
+            string details = UserDetails(name, age);
+            Console.WriteLine(details);
+        }
+        static string UserDetails(string name, int age)
+        {
+            return $"Assalam Alaikum my name is {name} and my age  is {age}";
+        }
+        static string ReadString(string message)
+        {
+            Console.Write($"{message}: ");
+            return Console.ReadLine();
+        }
+        static int ReadInt(string message)
+        {
+            Console.Write($"Enter a {message}: ");
+            return Convert.ToInt32(Console.ReadLine());
+        }
+        static int Add(int a, int b)
+        {
+            return a + b;
+        }
+    }
+}
 
 
 
