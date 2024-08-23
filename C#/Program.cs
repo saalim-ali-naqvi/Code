@@ -15,6 +15,8 @@ using System.Linq.Expressions;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Xml.XPath;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 
 //Hello World
 /*namespace MyApp
@@ -1789,7 +1791,7 @@ foreach (var item in teachers)
 }*/
 
 // Function parameters
-namespace functionParameters
+/*namespace functionParameters
 {
     class Program
     {
@@ -1833,6 +1835,30 @@ namespace functionParameters
         }
         static int Add(int a, int b)
         {
+            return a + b;
+        }
+    }
+}*/
+
+// Optional Parameters
+namespace optionalParametrs
+{
+    class Program
+    {
+        static void Main(string[] agrs)
+        {
+            int result = Add(5);
+            Console.WriteLine(result);
+
+            PrintName("Ali");
+        }
+        static void PrintName(string name = "Saalim")
+        {
+            Console.WriteLine($"My name is {name}");
+        }
+        static int Add(int a, int b = default)
+        {
+            //Console.Write($"b = {b}");
             return a + b;
         }
     }
