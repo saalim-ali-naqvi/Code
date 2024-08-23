@@ -1950,6 +1950,33 @@ foreach (var item in teachers)
     }
 }*/
 
+// Reference Parameter
+
+// Exersise: Area of Triangle
+/*namespace areaOfTriangle
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double width = ReadInt("Enter the width: ");
+            double height = ReadInt("Enter the height: ");
+
+            double result = CalcArea(width, height);
+            Console.WriteLine($"Area is {result}");
+        }
+        static double CalcArea(double width, double height)
+        {
+            return (width * height) / 2;
+        }
+        static double ReadInt(string message)
+        {
+            Console.Write(message);
+            return Convert.ToDouble(Console.ReadLine());
+        }
+    }
+}*/
+
 
 
 
