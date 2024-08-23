@@ -1841,7 +1841,7 @@ foreach (var item in teachers)
 }*/
 
 // Optional Parameters
-namespace optionalParametrs
+/*namespace optionalParametrs
 {
     class Program
     {
@@ -1860,6 +1860,52 @@ namespace optionalParametrs
         {
             //Console.Write($"b = {b}");
             return a + b;
+        }
+    }
+}*/
+
+// Named Parameters
+/*namespace namedParameters
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string nameInput = "Tony Stark";
+            int ageInput = 21;
+            string adderessInput = "Norway";
+
+            PrintDetails(nameInput, ageInput, adderessInput);
+        }
+        static void PrintDetails(string name, int age, string address)
+        {
+            Console.WriteLine($"Name: {name},\nAge: {age},\nAddress: {address}");
+        }
+
+        static void Cars()
+        {
+            Console.Write("Car name: ");
+            string carName = Console.ReadLine();
+
+            Console.Write("Model Name: ");
+            string modelName = Console.ReadLine();
+
+            Console.Write("Car Type: ");
+            string carType = Console.ReadLine();
+
+            Console.WriteLine($"{carName} {modelName} {carType}");
+        }
+    }
+}*/
+
+//Out parameters
+namespace outParameters
+{
+    class Program
+    {
+        static void Main(string[] agrs)
+        {
+            
         }
     }
 }
