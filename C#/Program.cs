@@ -1899,16 +1899,57 @@ foreach (var item in teachers)
 }*/
 
 //Out parameters
-namespace outParameters
+/*namespace outParameters
 {
     class Program
     {
         static void Main(string[] agrs)
         {
-            
+            Cars();
+
+            int number = 0;
+            test(out number);
+            Console.WriteLine(number);
+
+            List<string> shoppingList = new List<string>
+            {
+                "Coffee", "Milk"
+            };
+            Console.WriteLine(shoppingList.IndexOf("Coffee"));
+            Console.WriteLine(shoppingList.IndexOf("Milk"));
+
+            int index = -1;
+            for (int i = 0; i < shoppingList.Count; i++)
+            {
+                Console.WriteLine();
+            }
+        }
+        static bool TryParse(string s, out int result)
+        {
+            result = 0;
+            return true;
+        }
+        static void test(out int number)
+        {
+            number = 5;
+            //return true;
+        }
+        static void Cars()
+        {
+            Console.Write("Car Name: ");
+            string carName = Console.ReadLine();
+
+            Console.Write("Car Model: ");
+            string carModel = Console.ReadLine();
+
+            Console.Write("Car Type: ");
+            string carType = Console.ReadLine();
+
+            Console.WriteLine($"Your dream car is {carName} and the model of the cra is this {carModel} and the car type is {carType}");
         }
     }
-}
+}*/
+
 
 
 
