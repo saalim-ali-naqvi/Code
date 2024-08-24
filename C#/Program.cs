@@ -1977,6 +1977,49 @@ foreach (var item in teachers)
     }
 }*/
 
+// Exersise: Sum of int array
+
+// Exeption Hnadling
+
+// try........catch
+/*namespace tryCatch
+{
+    class Program
+    {
+        static void Main(string[] agrs)
+        {
+            //System.FormatException
+            //System.OverflowException
+
+            bool looping = true;
+
+            while (looping)
+            {
+                try
+                {
+                    Console.Write("Enter the number: ");
+                    int num = Convert.ToInt32(Console.ReadLine());
+
+                    looping = false;
+                }
+                catch (OverflowException)
+                {
+                    Console.WriteLine("Please Only a number less than 2 billion");
+                }
+                catch(FormatException)
+                {
+                    Console.WriteLine("Please enter only a number");
+                }
+                catch(Exception)
+                {
+                    Console.WriteLine("something went wrong!");
+                }
+            }
+
+            Console.WriteLine("Yoo Good bye");
+        }
+    }
+}*/
 
 
 
